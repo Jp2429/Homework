@@ -62,7 +62,7 @@ print(users["Erik"].get('home_town'))
 print(users["Erik"].get('lottery_numbers'))
 
 # 4. Get the species of Avril's pet Monty
-print(users["Avril"]['pets'])
+print(users["Avril"]['pets'][0]['species'])
 
 # 5. Get the smallest of Erik's lottery numbers
 erikLottery=[]
@@ -90,8 +90,20 @@ users['Erik']['home_town']='Edinburgh'
 print(users['Erik']['home_town'])
 
 # 9. Add a pet dog to Erik called "fluffy"
+users["Erik"]['pets'].append({'name':'fluffy','species':'dog'})
+print(users["Erik"]["pets"])
 # 10. Add another person to the users dictionary
-
-
-
+users['John']={
+    'twitter':'johntwitter',
+    'lotter_numbers':[18, 34, 8, 11, 24],
+    'home_town':'dunfermline',
+    'pets':[
+      {
+        "name": "monty",
+        "species": "snake"
+      }
+    ]
+    
+}
+print(users["John"])
 
